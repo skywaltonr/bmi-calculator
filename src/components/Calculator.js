@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Calculator = () =>{
     const [height, setHeight] = useState(0)
@@ -8,6 +8,10 @@ const Calculator = () =>{
     
     const calculateBMI = (event) =>{
         event.preventDefault()
+        if(weight == 0 || age ==0 || height ==0){
+            setBMI(null)
+            return
+        }
         setBMI(weight / (height / 100)^2)
     }
     return(
@@ -27,7 +31,7 @@ const Calculator = () =>{
                         Age
                     </label>
                     <input value={age} onChange={(e)=> setAge(e.target.value)} type="number" className="p-1 border-2 rounded-md mb-2"/>
-                    <button className="bg-blue-200 border-2 border-black rounded-md p-2 my-1" type="submit">Submit</button>
+                    <button className="bg-blue-400 hover:bg-blue-300 border-2 border-black hover:border-blue-300 rounded-md p-2 my-1" type="submit">Submit</button>
                 </form>
                 <div className="text-center my-1">
                     <h2 className="font-semibold">Your BMI is:</h2>
