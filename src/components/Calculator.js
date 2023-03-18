@@ -23,7 +23,7 @@ const Calculator = () =>{
         return "Obese"
     }
     return(
-        <div className='p-12 mt-12 bg-slate-100 drop-shadow-lg border-2 border-black rounded-lg max-w-lg mx-auto my-3drop-shadow-md'>
+        <div className='px-12 py-10 mt-12 bg-slate-100 drop-shadow-lg border-2 border-black rounded-lg max-w-lg mx-auto my-3drop-shadow-md'>
             <div className="">
                 <h1 className="mx-auto w-fit font-semibold text-xl">BMI Calculator</h1>
                 <form className="flex flex-col" onSubmit={(event) => calculateBMI(event)}>
@@ -47,7 +47,7 @@ const Calculator = () =>{
                 <div className="text-center my-1">
                     <h2 className="font-semibold font text-lg">Your BMI is:</h2>
                     {BMI && <><p className="text-2xl font-semibold">{BMI}</p>
-                    <p>Your weight catergory is: {calculateRange()}</p></>}
+                    <p className="text-md">Your weight catergory is: <span className="font-semibold">{calculateRange()}</span></p></>}
                 </div>
             </div>
         </div>
