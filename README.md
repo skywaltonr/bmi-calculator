@@ -1,4 +1,4 @@
-### BMI Calulator
+# BMI Calulator
 
 A simple react app for calculating BMI built using React and Tailwind CSS
 
