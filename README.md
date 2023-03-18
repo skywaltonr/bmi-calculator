@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+### BMI Calulator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple react app for calculating BMI built using React and Tailwind CSS
 
 ## Available Scripts
 
